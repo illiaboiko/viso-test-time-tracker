@@ -51,6 +51,3 @@ npm run dev                # start frontend on http://localhost:5173
 5. The table shows **daily totals** and a **grand total**.  
 
 ---
-## Notes
-
-- **Database (`dev.db`) is not included** in the repository — it is automatically generated with Prisma migrations.
