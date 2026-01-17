@@ -37,7 +37,7 @@ export default function EntryList({ entries }: Props) {
             <Typography variant="h6">
               {date} (Total: {dailyTotal}h)
             </Typography>
-            <Table size="small">
+            <Table size="small" aria-label='simple table'>
               <TableHead>
                 <TableRow>
                   <TableCell>Project</TableCell>

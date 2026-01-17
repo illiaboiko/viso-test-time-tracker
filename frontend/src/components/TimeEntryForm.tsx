@@ -18,10 +18,11 @@ const projects = [
 ]
 
 interface Props {
+    onSuccessNotify: () => void,
   onEntryCreated: () => void // callback to refresh entry list
 }
 
-export default function TimeEntryForm({ onEntryCreated }: Props) {
+export default function TimeEntryForm({ onEntryCreated, onSuccessNotify }: Props) {
   const [entry, setEntry] = useState<NewTimeEntry>({
     date: new Date().toISOString().split('T')[0], // YYYY-MM-DD
     project: '',
@@ -59,6 +60,7 @@ export default function TimeEntryForm({ onEntryCreated }: Props) {
         description: '',
       })
       onEntryCreated()
+      onSuccessNotify()
     } catch (err: any) {
       setError(err.message)
     } finally {
