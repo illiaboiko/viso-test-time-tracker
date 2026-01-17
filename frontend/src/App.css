@@ -1,7 +1,22 @@
-#root {
+.app-title {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
 }
 
