@@ -6,7 +6,6 @@ import EntryList from './components/EntryList'
 
 import { useSnackbar } from 'notistack'
 import type { VariantType } from 'notistack'
-import { Button } from '@mui/material'
 
 function App() {
   const [entries, setEntries] = useState<TimeEntry[]>([])
@@ -23,7 +22,15 @@ function App() {
   }
 
   useEffect(() => {
-    loadEntries()
+    const fetchData = async () => {
+      try {
+        await loadEntries()
+      } catch (err) {
+        console.log(err)
+      }
+    }
+
+    fetchData()
   }, [])
 
   return (
