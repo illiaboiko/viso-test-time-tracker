@@ -29,6 +29,7 @@ Run frontend and backend in separate terminals. This project requires **Node.js 
 ```bash
 cd backend
 npm install
+npx prisma init --datasource-provider sqlite --output ../generated/prisma
 npx prisma generate        # generate Prisma client
 npx prisma migrate dev     # create SQLite database and tables
 npm run dev                # start backend on http://localhost:3001
