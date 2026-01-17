@@ -22,9 +22,12 @@ frontend/      # React frontend
 ---
 
 ## Setup Instructions
-Run frontend and backend in separate terminals. This project requires **Node.js v20.19** (tested version). 
+Run frontend and backend in separate terminals. 
 
 ### 1. Backend
+
+This project requires **Node.js v20.19** (tested version). 
+**Make sure you use correct node version**
 
 ```bash
 cd backend
