@@ -1,9 +1,11 @@
 import express from 'express'
+import { prisma } from '../prisma'
 
 const router = express.Router()
 
-router.get('/', (_req, res) => {
-  res.send('entries successfully accessed')
+router.get('/', async (_req, res) => {
+  const entries = await prisma.timeEntry.findMany()
+  res.json(entries);
 })
 
-export default router;
+export default router
